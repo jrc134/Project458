@@ -20,7 +20,7 @@ export const getDonation = async (req, res) => {
     try {
         const donation = await DonationMessage.findById(id);
         
-        res.status(200).json(post);
+        res.status(200).json(donation);
     } catch (error) {
         res.status(404).json({ message: error.message });
     }
@@ -63,7 +63,7 @@ export const deleteDonation = async (req, res) => {
     res.json({ message: "Donation deleted successfully." });
 }
 
-export const likePost = async (req, res) => {
+export const likeDonation = async (req, res) => {
     const { id } = req.params;
 
     if(!req.userId) return res.json({ message: 'Unauthenticated' } );
@@ -75,10 +75,10 @@ export const likePost = async (req, res) => {
     const index = donation.likes.findIndex((id) => id === String(req.userId ) );
 
     if(index === -1) {
-        // for liking the post 
+        // for liking the donation 
         donation.likes.push(req.userId); 
     } else {
-        // dislike the post 
+        // dislike the donation 
         donation.likes = donation.likes.filter((id) => id !== String(req.userId));
 
     }

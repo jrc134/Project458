@@ -1,6 +1,6 @@
 import { Container, Grow, Grid } from '@material-ui/core';
 import Donations from '../Donations/Donations'
-import DonationForm from '../Form/Form'
+import DonationForm from '../Form/DonationForm'
 
 import { useDispatch } from 'react-redux';
 import { getDonations } from '../../actions/donations';

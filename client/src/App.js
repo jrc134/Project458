@@ -4,12 +4,10 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import useStyles from './styles';
 import Navbar from './components/Navbar/Navbar';
 import Home from './components/Home/Home';
+import DonationHome from './components/Home/DonationHome';
 import Auth from './components/Auth/Auth';
 
-
-
 import memories from './images/memories.png';
-import Donations from './components/Donations/Donations';
 
 const App = () => (
   <BrowserRouter>
@@ -18,7 +16,7 @@ const App = () => (
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/auth" exact component= {Auth} />
-        <Route path="/donation" exact component= {Donations} />
+        <Route path="/donation" exact component= {DonationHome} />
 
         </Switch>
 

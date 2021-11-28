@@ -4,7 +4,7 @@ import Form from '../Form/Form'
 
 import { useDispatch } from 'react-redux';
 import { getPosts } from '../../actions/posts';
-//import { getDonations } from '../../actions/donations';
+
 import React, { useState, useEffect } from 'react';
 
 

@@ -6,6 +6,7 @@ import cors from 'cors';
 
 import postRoutes from './routes/posts.js';
 import userRoutes from './routes/users.js';
+import donationRoutes from './routes/donations.js';
 
 const app = express();
 
@@ -15,6 +16,7 @@ app.use(cors());
 
 app.use('/posts', postRoutes);
 app.use('/user', userRoutes);
+app.use('/donations', donationRoutes);
 
 
 const CONNECTION_URL = '';

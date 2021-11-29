@@ -14,13 +14,12 @@ export default makeStyles((theme) => ({
   heading: {
     color: 'rgba(0,183,255, 1)',
     textDecoration: 'none',
-    fontWeight: '500',
     marginRight: '15px',
   },
   donation: {
     color: 'rgba(0,183,255, 1)',
     textDecoration: 'none',
-    marginLeft: '30px',
+    marginLeft: '150px',
     marginRight: '15px',
   },
   info: {

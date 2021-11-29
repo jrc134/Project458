@@ -51,7 +51,6 @@ const Navbar = () => {
                 <Typography component={Link} to="/" className={classes.heading} variant="h3" align="center">EZ <br></br>Grub</Typography>
                 <img className={classes.image} src={logotemp} alt="icon" height="100" />
                 <Typography component={Link} to="/donation" className={classes.donation} variant="h6" align="center">Donations</Typography>
-                <Typography component={Link} to="/information" className={classes.info} variant="h6" align="center">Information</Typography>
                 </div>
                 <Toolbar className={classes.Toolbar }>
                     {user ? (

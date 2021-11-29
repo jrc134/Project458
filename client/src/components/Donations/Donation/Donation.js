@@ -13,10 +13,10 @@ import useStyles from './styles';
 const Donation = ({ donation, setCurrentID }) => {
     const dispatch = useDispatch();
     const classes = useStyles();
-    const user = JSON.parsel(localStorage.getItem('profile'));
+    const user = JSON.parse(localStorage.getItem('profile'));
 
     const Likes = () => {
-        if(donation.likes.lenght > 0){
+        if(donation.likes.length > 0){
             return donation.likes.find((like) => like === (user?.result?.googleId || user?.result?._id))
             ? (
                 <><ThumbUpAltIcon fontSize="small"/>&nbsp;{donation.likes.length > 2 ? `You and ${donation.likes.length - 1} others` : `${donation.likes.length} like${donation.likes.length > 1 ? 's' : ''}`}</>
@@ -39,9 +39,6 @@ const Donation = ({ donation, setCurrentID }) => {
             <Button style={{ color: 'white' }} size="small" onClick={() => setCurrentID(donation._id)}><MoreHorizIcon fontSize="default" /></Button>
           </div>
           )}
-          <div className={classes.details}>
-            <Typography variant="body2" color="textSecondary" component="h2">{donation.tags.map((tag) => `#${tag} `)}</Typography>
-          </div>
           <Typography className={classes.title} gutterBottom variant="h5" component="h2">{donation.title}</Typography>
           <CardContent>
             <Typography variant="body2" color="textSecondary" component="p">{donation.message}</Typography>
